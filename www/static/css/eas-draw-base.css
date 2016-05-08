@@ -1,0 +1,463 @@
+/* Remove underline when hover from icons */
+a.fa:hover ,
+a.fa:focus {
+    text-decoration: none;
+}
+
+.alert-info {
+    background-color: #F0F8F1;
+    border-color: #94B294;
+    color: #5A825A;
+}
+
+/***** DRAW HEADER *****/
+.draw-heading .draw-editable-title {
+    background: transparent;
+    border: none;
+}
+
+.draw-heading .draw-editable-title:focus {
+    outline-color: #4cae4c;
+}
+
+/* Draw title (given by users)*/
+.draw-heading .draw-title-area {
+    /* Font */
+    font-family: 'robotoregular', sans-serif;
+    color: #3f3f3f;
+    font-size: 28px;
+
+    /* Removing textarea look */
+    border: none;
+    overflow: hidden;
+    outline: none;
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+
+    /* To center it */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    height: auto !important;
+}
+
+.draw-heading .draw-title-area:focus {
+  border-color: #4cae4c;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(76, 174, 76, 0.60);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(76, 174, 76, 0.60);
+}
+
+.draw-heading .back-arrow,
+.draw-heading .add-favourites,
+.draw-heading .public-draw-settings {
+    padding: 10px 0 0 0;
+}
+
+.draw-heading .back-arrow img,
+.draw-heading .add-favourites img {
+    width: 35px;
+    height: auto;
+}
+
+.draw-heading #draw-description-area {
+    /* Removing textarea look */
+    border: none;
+    overflow: hidden;
+    outline: none;
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    width: 100%;
+    height:50px;
+}
+
+#edit-settings-button {
+    color: #35414B;
+}
+
+@media (min-width: 992px) {
+    .draw-heading .back-arrow img,
+    .draw-heading .add-favourites img {
+        width: 40px;
+    }
+}
+
+.draw-heading .access-level {
+    color: #6F6F6F;
+}
+
+#results {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#shared-draw-created {
+    text-align: center;
+    font-size: 20px;
+}
+
+#shared-draw-smiley {
+    text-align: center;
+    font-size: 30px;
+}
+
+#invite-options {
+    background-color: #FCFCFC;
+    border: 1px #D7D7D7 solid;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.url-share {
+    border: 1px solid #ebebeb;
+    padding: 6px;
+    background-color: #f5f5f5;
+    color: #3B5998;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.invite-people-option {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.settings-option {
+    cursor: pointer;
+}
+
+#send-emails {
+    margin-top: 10px;
+}
+
+.invited-users {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#create-and-toss:disabled,
+#try:disabled,
+#publish:disabled,
+#shared-draw-toss:disabled{
+    cursor: default
+}
+
+#toss-schedule {
+    max-width: 190px;
+}
+
+/***** INDIVIDUAL DRAWS *****/
+.checkbox {
+    margin-top: 0;
+}
+
+/* Makes the text be inline with the checkbox */
+.checkbox_label {
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.btn-row {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+/* Place the labels closer to the input boxes */
+.control-label {
+    padding-right: 5px;
+}
+
+/* Place the input boxes closer to the labels */
+.controls {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+/* Padding for the checkbox "allow repeat" in draws */
+.checkbox-div {
+    padding-top: 3px;
+    padding-left: 25px;
+}
+
+
+/* Add minimim size to the input boxes */
+#id_type_of_deck {
+    max-width: 130px;
+}
+
+#id_number_of_results {
+    max-width: 75px;
+}
+
+#id_range_max {
+    max-width: 75px;
+}
+#id_range_min {
+    max-width: 75px;
+}
+
+/* Container for the card images in CardDraw */
+.card-container {
+    margin-bottom: 10px;
+    text-align: center;
+    height: 95px;
+}
+
+/* Images for CardDraw */
+.card-container img {
+    height: 100%;
+    width: auto;
+}
+
+#canvas-photo-main {
+    margin-top: 15px;
+}
+
+.protected {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.protected.checkbox[readonly]{
+    pointer-events: none;
+
+}
+
+/* When trying a public draw, the results tag seemed to be not centered */
+#header-try-result {
+    padding-right: 30px;
+}
+
+/* ======================  CHAT  ======================== */
+#chat-board
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-board li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+#chat-board .chatline-content {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #777777;
+}
+
+
+#chat-board .chatline-details{
+    margin-bottom: 0;
+}
+
+
+#chat-board .chatline-datetime {
+    margin-left: 10px;
+    display: none;
+}
+
+#chat-board li:hover .chatline-datetime{
+    display: inline-block;
+
+}
+
+#chat-board .panel-heading {
+    cursor:pointer;
+}
+
+.chat .panel-body {
+    background-color: #fbfbfb;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 250px;
+}
+
+.chat .panel-body {
+    height: 400px;
+}
+
+.chat-disabled {
+    display: none;
+}
+
+.chat-avatar {
+    width: 30px;
+    height: auto;
+}
+
+.login-for-chat {
+    position:absolute;
+    color: white;
+    left:15px;
+    right:15px;
+    margin: 150px 15px 0 15px;
+    z-index: 5;
+}
+
+.login-for-chat p:first-of-type a{
+    color: #A4D3FE;
+}
+
+.login-for-chat p:first-of-type{
+    margin-bottom: 60px;
+}
+
+.login-for-chat .form-group {
+    margin: 0 auto 15px auto;
+    float: none;
+    width: 80%;
+    max-width: 200px;
+}
+
+.chat .login-for-chat ~ .panel-chat:before {
+    content: "";
+    background-color: #080808;
+    z-index: 3;
+    opacity: 0.8;
+    position:absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin: 0 15px 20px 15px;
+    border-radius: 4px;
+}
+
+/* Chat placed inside the main frame */
+@media screen and (min-width: 1440px) {
+    .chat-inline {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1439px) {
+    .chat-outside {
+        display: none;
+    }
+}
+
+/* In the shared draw, (in general and configure steps) add some 
+   padding between the breadcrumb and the form fields
+*/
+#draw-form > .step-general,
+#draw-form > .step-configure {
+    margin-top: 10px;
+}
+
+/* ===================  SHARED DRAW BREADCRUMB  =================== */
+.breadcrumb-shared-draw {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #F0F8F1;
+    margin-bottom: 10px;
+    padding: 0 0 0 0;
+    border-bottom: 1px #E7E7E7 solid;
+}
+
+.breadcrumb-shared-draw .cancel {
+    flex: 0 0 40px;
+    color: #6f6f6f;
+}
+
+.breadcrumb-shared-draw .help-text {
+    text-align: center;
+    flex: auto;
+}
+
+.breadcrumb-shared-draw .title {
+    margin-top: 10px;
+    padding-bottom:5px;
+    font-size: 20px;
+    color: #4cae4c;
+    border-bottom: 2px #c8e7ca solid;
+}
+
+.breadcrumb-shared-draw .subtitle {
+    margin: 10px 0 10px;
+    font-size: 16px;
+    color: #979797;
+    text-decoration: none;
+
+    /* Disable links */
+    pointer-events: none;
+    cursor: default;
+}
+
+@media screen and (max-width: 400px) {
+    .breadcrumb-shared-draw .subtitle {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.breadcrumb-shared-draw .subtitle.done:not(.focus) {
+    /* Disable links */
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.breadcrumb-shared-draw .subtitle.focus{
+    font-size: 17px;
+    font-weight: bold;
+    color: #4cae4c;
+}
+
+.breadcrumb-shared-draw .subtitle.done {
+    font-weight: bold;
+}
+
+/*
+ * https://github.com/lipis/bootstrap-social
+ */
+.btn-social{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btn-social>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social.btn-lg{padding-left:61px}.btn-social.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social.btn-sm{padding-left:38px}.btn-social.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social.btn-xs{padding-left:30px}.btn-social.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:34px;width:34px;padding:0}.btn-social-icon>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social-icon.btn-lg{padding-left:61px}.btn-social-icon.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social-icon.btn-sm{padding-left:38px}.btn-social-icon.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social-icon.btn-xs{padding-left:30px}.btn-social-icon.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon>:first-child{border:none;text-align:center;width:100% !important}
+.btn-social-icon.btn-lg{height:45px;width:45px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-sm{height:30px;width:30px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-xs{height:22px;width:22px;padding-left:0;padding-right:0}
+.btn-facebook{color:#fff;background-color:#3b5998;border-color:rgba(0,0,0,0.2)}.btn-facebook:focus,.btn-facebook.focus{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:hover{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2)}.btn-facebook:active:hover,.btn-facebook.active:hover,.open>.dropdown-toggle.btn-facebook:hover,.btn-facebook:active:focus,.btn-facebook.active:focus,.open>.dropdown-toggle.btn-facebook:focus,.btn-facebook:active.focus,.btn-facebook.active.focus,.open>.dropdown-toggle.btn-facebook.focus{color:#fff;background-color:#23345a;border-color:rgba(0,0,0,0.2)}
+.btn-facebook:active,.btn-facebook.active,.open>.dropdown-toggle.btn-facebook{background-image:none}
+.btn-facebook.disabled,.btn-facebook[disabled],fieldset[disabled] .btn-facebook,.btn-facebook.disabled:hover,.btn-facebook[disabled]:hover,fieldset[disabled] .btn-facebook:hover,.btn-facebook.disabled:focus,.btn-facebook[disabled]:focus,fieldset[disabled] .btn-facebook:focus,.btn-facebook.disabled.focus,.btn-facebook[disabled].focus,fieldset[disabled] .btn-facebook.focus,.btn-facebook.disabled:active,.btn-facebook[disabled]:active,fieldset[disabled] .btn-facebook:active,.btn-facebook.disabled.active,.btn-facebook[disabled].active,fieldset[disabled] .btn-facebook.active{background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
+.btn-facebook .badge{color:#3b5998;background-color:#fff}
+
+#register-raffle-fb,
+#fetch-fb-photos {
+    margin-left: auto;
+}
+#label-fb-button {
+    margin: 0;
+}
+
