@@ -28,13 +28,29 @@ function loadPage(url) {
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState === 4){
             if (xmlhttp.status === 200) {
-                document.write(replace_all_rel_by_abs(xmlhttp.responseText));
+                document.open("text/html", "replace");
+                var content = replace_all_rel_by_abs(xmlhttp.responseText);
+                content = content.replace("</body></html>","");
+                var script = "<script type='text/javascript' src='/js/page-loader.js'></script>" +
+                             "<script>captureAllLinks();</script>";
+                content = content + script + "</body></html>";
+                document.write(content);
                 document.close();
             }
         }
     };
     xmlhttp.open("GET", url , true);
     xmlhttp.send();
+}
+
+function captureAllLinks(){
+    window.onclick = function(e) {
+        if (e.target.tagName == 'A') {
+            alert(e.target.href);
+            loadPage(e.target.href);
+            return false;
+        }
+    };
 }
 
 var BASE_URL = "https://echaloasuerte.com"
