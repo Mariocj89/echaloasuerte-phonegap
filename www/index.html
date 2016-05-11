@@ -5,6 +5,25 @@
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
+    function loadPage(url){
+         var ref = window.open(url, '_self', 'location=no,zoom=no,toolbar=no');
+         ref.addEventListener('loaderror', function(event) { alert('Unable to load app: ' + event.message); });
+    }
+    /**Load the app using the user language */
+    function localeLoad() {
+        navigator.globalization.getPreferredLanguage(
+            function (language) {
+                if (language.value[0] === 'e' && language.value[1] === 'n') {
+                    loadPage("http://chooserandom.com");
+                } else {
+                    loadPage("http://echaloasuerte.com");
+                }
+            },
+            function () {
+                loadPage("http://echaloasuerte.com");
+            }
+            );
+    }
 
     // Wait for device API libraries to load
     //
@@ -13,8 +32,7 @@
     // device APIs are available
     //
     function onDeviceReady() {
-         var ref = window.open('https://echaloasuerte.com', '_self', 'location=no,zoom=no,toolbar=no');
-         ref.addEventListener('loaderror', function(event) { alert('Unable to load app: ' + event.message); });
+        localeLoad();
     }
 
     </script>
