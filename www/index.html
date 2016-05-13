@@ -8,6 +8,7 @@
     function loadPage(url){
          var ref = window.open(url, '_self', 'location=no,zoom=no,toolbar=no');
          ref.addEventListener('loaderror', function(event) { alert('Unable to load app: ' + event.message); });
+         ref.addEventListener('exit', function(event) { navigator.app.exitApp();});
     }
     /**Load the app using the user language */
     function localeLoad() {
